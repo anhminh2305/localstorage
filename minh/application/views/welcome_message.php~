@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+
+<form action="<?php echo base_url().'Welcome/loginaction'?>" method="post" id="loginform">
+	<label for="name">Type Password</label>
+	<input type="password" name="password">
+	<input type="submit" name="Enter">
+</form>
+
+ <script type="text/javascript">
+ 	var id = localStorage.clear();
+ 	if(id==null)
+		document.getElementById('loginform').style.display = 'block';
+ 	else window.location.href = '/login/index/profile'
+ </script>
+
+</body>
+</html>

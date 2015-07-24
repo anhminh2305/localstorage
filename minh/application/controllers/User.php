@@ -16,9 +16,9 @@ class User extends CI_Controller {
 
 	public function update(){
 		$id_local = $this->input->post('id');
-		$email = $this->input->post('email');
-		$fb = $this->input->post('facebook');
-		$phone = $this->input->post('phone');
+		$email = $this->db->escape($this->input->post('email'));
+		$fb = $this->db->escape($this->input->post('facebook'));
+		$phone = $this->db->escape($this->input->post('phone'));
 
 		$arr = $this->Mlogin->Search($id_local);
 		foreach ($arr as $key) {
@@ -36,7 +36,7 @@ class User extends CI_Controller {
 			$data =  array('email'=>$email, 'facebook'=>$fb, 'phone'=>$phone, 'Update'=>1);
 			$this->Mlogin->Update((int)$id_local, $email, $fb, $phone);
 		//	$this->load->view('user');
-			echo "Cap nhat thanh cong".$update;
+			echo "Cap nhat thanh cong"	;
 		}
 
 		

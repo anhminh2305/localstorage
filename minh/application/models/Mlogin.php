@@ -8,8 +8,13 @@ class Mlogin extends CI_Model{
 		return $this->db->insert_id();
 	}
 
-	function Update($id, $email, $facebook, $phone)
+	function Update($id, $email, $facebook, $phone)	
 	{
+		$id = $this->db->escape($id);
+		$email = $this->db->escape($email);
+		$facebook = $this->db->escape($facebook);
+		$phone = $this->db->escape($phone);
+
 	 $data = array(
 	 			'id' => $id,
                'email' => $email,

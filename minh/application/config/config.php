@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://anhminh.dev/minh/index.php/';
+$config['base_url'] = '192.168.0.75/minh/index.php/';
 
 /*
 |--------------------------------------------------------------------------
